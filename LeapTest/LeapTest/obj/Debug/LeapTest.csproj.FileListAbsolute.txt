@@ -1,0 +1,17 @@
+D:\DevelopmentProject\LeapTest\LeapTest\bin\Debug\LeapTest.exe.config
+D:\DevelopmentProject\LeapTest\LeapTest\bin\Debug\Leap.dll
+D:\DevelopmentProject\LeapTest\LeapTest\bin\Debug\LeapCSharp.dll
+D:\DevelopmentProject\LeapTest\LeapTest\bin\Debug\Leap.lib
+D:\DevelopmentProject\LeapTest\LeapTest\bin\Debug\LeapTest.exe
+D:\DevelopmentProject\LeapTest\LeapTest\bin\Debug\LeapTest.pdb
+D:\DevelopmentProject\LeapTest\LeapTest\obj\Debug\LeapTest.csprojResolveAssemblyReference.cache
+D:\DevelopmentProject\LeapTest\LeapTest\obj\Debug\MainWindow.baml
+D:\DevelopmentProject\LeapTest\LeapTest\obj\Debug\MainWindow.g.cs
+D:\DevelopmentProject\LeapTest\LeapTest\obj\Debug\App.g.cs
+D:\DevelopmentProject\LeapTest\LeapTest\obj\Debug\LeapTest_Content.g.cs
+D:\DevelopmentProject\LeapTest\LeapTest\obj\Debug\LeapTest_MarkupCompile.cache
+D:\DevelopmentProject\LeapTest\LeapTest\obj\Debug\LeapTest.g.resources
+D:\DevelopmentProject\LeapTest\LeapTest\obj\Debug\LeapTest.Properties.Resources.resources
+D:\DevelopmentProject\LeapTest\LeapTest\obj\Debug\LeapTest.csproj.GenerateResource.Cache
+D:\DevelopmentProject\LeapTest\LeapTest\obj\Debug\LeapTest.exe
+D:\DevelopmentProject\LeapTest\LeapTest\obj\Debug\LeapTest.pdb
