@@ -19,29 +19,36 @@ namespace LeapTest {
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
     public partial class MainWindow : Window {
+
+        private SampleListener listener;
+        private Controller controller;
+
         public MainWindow() {
             InitializeComponent();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e) {
-            
-            // set leap controller
+
+            // Set leap controller
             // Create a sample listener and controller
-            SampleListener listener = new SampleListener();
-            listener.leapInfoLabel = this.LeapInfoLabel;
-            listener.leapStateLabel = this.LeapStateLabel;
-            Controller controller = new Controller();
+            this.listener = new SampleListener();
+            this.listener.OnFrameEvent += listener_OnFrameEvent;
+            this.controller = new Controller();
 
             // Have the sample listener receive events from the controller
-            controller.AddListener(listener);
+            this.controller.AddListener(this.listener);
+        }
 
-            // Keep this process running until Enter is pressed
-            //Console.WriteLine("Press Enter to quit...");
-            //Console.ReadLine();
+        void listener_OnFrameEvent(object sender, EventArgs e) {
+            this.Dispatcher.BeginInvoke(new Action(delegate {
+                this.LeapStateLabel.Content = "connected";
+            }), null);
+        }
 
-            //// Remove the sample listener when done
-            //controller.RemoveListener(listener);
-            //controller.Dispose();
+        private void Window_Unloaded(object sender, RoutedEventArgs e) {
+            // Remove the sample listener when done
+            this.controller.RemoveListener(this.listener);
+            this.controller.Dispose();
         }
     }
 }

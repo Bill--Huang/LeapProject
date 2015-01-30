@@ -15,8 +15,8 @@ using Leap;
 namespace LeapTest {
     class SampleListener : Listener {
         private Object thisLock = new Object();
-        public System.Windows.Controls.Label leapStateLabel;
-        public System.Windows.Controls.Label leapInfoLabel;
+
+        public event EventHandler OnFrameEvent = null;
 
         private void SafeWriteLine(String line) {
             lock (thisLock) {
@@ -48,6 +48,11 @@ namespace LeapTest {
 
         public override void OnFrame(Controller controller) {
             // Get the most recent frame and report some basic information
+
+            if (OnFrameEvent != null) {
+                OnFrameEvent.Invoke(controller, null);
+            }
+
             Frame frame = controller.Frame();
 
             SafeWriteLine("Frame id: " + frame.Id
@@ -57,18 +62,18 @@ namespace LeapTest {
                         + ", tools: " + frame.Tools.Count
                         + ", gestures: " + frame.Gestures().Count);
 
-            foreach (Hand hand in frame.Hands) {
-                SafeWriteLine("  Hand id: " + hand.Id
-                            + ", palm position: " + hand.PalmPosition);
-                // Get the hand's normal vector and direction
-                Vector normal = hand.PalmNormal;
-                Vector direction = hand.Direction;
+            //foreach (Hand hand in frame.Hands) {
+            //    SafeWriteLine("  Hand id: " + hand.Id
+            //                + ", palm position: " + hand.PalmPosition);
+            //    // Get the hand's normal vector and direction
+            //    Vector normal = hand.PalmNormal;
+            //    Vector direction = hand.Direction;
 
-                // Calculate the hand's pitch, roll, and yaw angles
-                SafeWriteLine("  Hand pitch: " + direction.Pitch * 180.0f / (float)Math.PI + " degrees, "
-                            + "roll: " + normal.Roll * 180.0f / (float)Math.PI + " degrees, "
-                            + "yaw: " + direction.Yaw * 180.0f / (float)Math.PI + " degrees");
-            }
+            //    // Calculate the hand's pitch, roll, and yaw angles
+            //    SafeWriteLine("  Hand pitch: " + direction.Pitch * 180.0f / (float)Math.PI + " degrees, "
+            //                + "roll: " + normal.Roll * 180.0f / (float)Math.PI + " degrees, "
+            //                + "yaw: " + direction.Yaw * 180.0f / (float)Math.PI + " degrees");
+            //}
 
             if (!frame.Hands.IsEmpty || !frame.Gestures().IsEmpty) {
                 SafeWriteLine("");
