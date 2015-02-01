@@ -11,3 +11,7 @@ E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\Leap4EProject.Propertie
 E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\Leap4EProject.csproj.GenerateResource.Cache
 E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\Leap4EProject.exe
 E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\Leap4EProject.pdb
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\bin\Debug\Leap.dll
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\bin\Debug\LeapCSharp.dll
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\bin\Debug\Leap.lib
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\Leap4EProject_Content.g.cs
