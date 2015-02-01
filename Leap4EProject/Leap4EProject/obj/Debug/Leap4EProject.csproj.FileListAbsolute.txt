@@ -1,0 +1,13 @@
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\bin\Debug\Leap4EProject.exe.config
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\bin\Debug\Leap4EProject.exe
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\bin\Debug\Leap4EProject.pdb
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\Leap4EProject.csprojResolveAssemblyReference.cache
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\MainWindow.baml
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\MainWindow.g.cs
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\App.g.cs
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\Leap4EProject_MarkupCompile.cache
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\Leap4EProject.g.resources
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\Leap4EProject.Properties.Resources.resources
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\Leap4EProject.csproj.GenerateResource.Cache
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\Leap4EProject.exe
+E:\Dev\LeapProject\Leap4EProject\Leap4EProject\obj\Debug\Leap4EProject.pdb
