@@ -15,10 +15,15 @@ using System.Windows.Shapes;
 using Leap;
 using Leap4EProject.TestPart;
 
+
 namespace Leap4EProject {
+    using Leap4Es;
+
     public partial class MainWindow : Window {
-        private TestListener listener;
-        private Controller controller;
+        //private TestListener listener;
+        //private Controller controller;
+
+        private Leap4E leap4E;
 
         public MainWindow() {
             InitializeComponent();
@@ -27,24 +32,24 @@ namespace Leap4EProject {
         private void Window_Loaded(object sender, RoutedEventArgs e) {
             // Set leap controller
             // Create a sample listener and controller
-            this.listener = new TestListener();
-            this.listener.OnFrameEvent += listener_OnFrameEvent;
-            this.controller = new Controller();
+            //this.listener = new TestListener();
+            //this.listener.OnFrameEvent += listener_OnFrameEvent;
+            //this.controller = new Controller();
 
-            // Have the sample listener receive events from the controller
-            this.controller.AddListener(this.listener);
+            //// Have the sample listener receive events from the controller
+            //this.controller.AddListener(this.listener);
+
+            this.leap4E = new Leap4E();
         }
 
-        void listener_OnFrameEvent(object sender, EventArgs e) {
-            this.Dispatcher.BeginInvoke(new Action(delegate {
-                //this.LeapStateLabel.Content = "connected";
-            }), null);
-        }
+        //void listener_OnFrameEvent(object sender, EventArgs e) {
+        //    this.Dispatcher.BeginInvoke(new Action(delegate {
+        //        //this.LeapStateLabel.Content = "connected";
+        //    }), null);
+        //}
 
-        private void Window_Unloaded(object sender, RoutedEventArgs e) {
-            // Remove the sample listener when done
-            this.controller.RemoveListener(this.listener);
-            this.controller.Dispose();
+        private void Window_Closed(object sender, EventArgs e) {
+            this.leap4E.Dispose();
         }
     }
 }

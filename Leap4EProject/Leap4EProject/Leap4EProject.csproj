@@ -60,6 +60,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Leap4Es\AbstractLeap4EGesture.cs" />
+    <Compile Include="Leap4Es\Leap4E.cs" />
+    <Compile Include="Leap4Es\Leap4EGestureManager.cs" />
+    <Compile Include="Leap4Es\LeapRawData.cs" />
     <Compile Include="TestPart\TestListener.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
