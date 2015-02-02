@@ -18,13 +18,15 @@ namespace Leap4EProject.Leap4Es {
 
         #region [Private Variables - Field]
         private List<AbstractLeap4EGesture> leap4EGestureList;
+        private Leap4E leap4E;
         #endregion
 
-        public Leap4EGestureManager() {
+        public Leap4EGestureManager(Leap4E leap) {
+            this.leap4E = leap;
             this.leap4EGestureList = new List<AbstractLeap4EGesture>();
 
             // Test
-            this.leap4EGestureList.Add(new AbstractLeap4EGesture());
+            // this.leap4EGestureList.Add(new AbstractLeap4EGesture());
 
             // Add default gesture
         }
@@ -36,11 +38,14 @@ namespace Leap4EProject.Leap4Es {
 
             for (int i = 0; i < this.leap4EGestureList.Count; i++) {
                 AbstractLeap4EGesture tempGesture = this.leap4EGestureList[i];
-                tempGesture.Update();
+                tempGesture.Update(this.leap4E.RawData);
             }
         }
 
         public bool Add(AbstractLeap4EGesture gesture) {
+            if (!this.leap4EGestureList.Contains(gesture)) {
+                this.leap4EGestureList.Add(gesture);
+            }
             return true;
         }
 
@@ -49,7 +54,9 @@ namespace Leap4EProject.Leap4Es {
         }
 
         public bool Contain(AbstractLeap4EGesture gesture) {
-            return true;
+           
+            // TODO: override IComparable interface, gesture class name as unique id
+            return this.leap4EGestureList.Contains(gesture);
         }
     }
 }

@@ -62,8 +62,11 @@
     </ApplicationDefinition>
     <Compile Include="Leap4Es\AbstractLeap4EGesture.cs" />
     <Compile Include="Leap4Es\Leap4E.cs" />
+    <Compile Include="Leap4Es\Leap4EEventArgs.cs" />
     <Compile Include="Leap4Es\Leap4EGestureManager.cs" />
     <Compile Include="Leap4Es\LeapRawData.cs" />
+    <Compile Include="Leap4Es\Sample1Leap4EGesture.cs" />
+    <Compile Include="Leap4Es\Sample2Leap4EGesture.cs" />
     <Compile Include="TestPart\TestListener.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

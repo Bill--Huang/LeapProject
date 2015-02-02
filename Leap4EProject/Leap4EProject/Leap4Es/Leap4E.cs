@@ -60,7 +60,7 @@ namespace Leap4EProject.Leap4Es {
             this.SafeWriteLine("Leap4E: Leap4E Init");
             //
             this.leapRawData = new LeapRawData();
-            this.leap4EGestureManager = new Leap4EGestureManager();
+            this.leap4EGestureManager = new Leap4EGestureManager(this);
 
             // init leap controller
             this.leapOriginalController = new Controller();
